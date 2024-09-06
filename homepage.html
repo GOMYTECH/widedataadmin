@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .notice {
+            background-color: #e6ffe6;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .profile-name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .balance-container {
+            background-color: #e6ffe6;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .action-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .action-btn:hover {
+            background-color: #45a049;
+        }
+
+        .transaction-history {
+            background-color: #e6ffe6;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .transaction-history h2 {
+            margin-top: 0;
+        }
+
+        .transaction-history ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .transaction-history li {
+            padding: 10px 0;
+        }
+
+        .see-all-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .see-all-btn:hover {
+            background-color: #45a049;
+        }
+
+        .floating-support-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .floating-support-btn button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .floating-support-btn button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .profile-name {
+                font-size: 14px;
+            }
+        }
+    </style>
+  
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="notice">welcome to your admin page </div>
+            <div class="profile">
+                <img src="muhar.jpg" alt="Profile Picture">
+                <span class="profile-name">wide data</span>
+            </div>
+        </header>
+        
+        <div class="balance-container">
+            <h1>Balance:₦45</h1>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="action-btn" onclick="redirectodepositPage('Deposit')">Withdraw</button>
+            <button class="action-btn" onclick="redirecttotcPage('Withdraw')">Customer </button>
+            <button class="action-btn" onclick="redirecttotimePage('Withdraw')">Price </button>
+        </div>
+        
+        <div class="transaction-history">
+            <h2>Transaction History</h2>
+            <ul>
+           <li>  You got ₦20.85 from MTN SME 3GB => 202409051453XYNCJ05</li> 
+
+             <li> You got ₦6.95 from MTN SME 1GB => 202409051440NCJDI27</li> 
+                
+             <li>  You got ₦2 from Mtn Airtime => 202409040856MCTUY44</li> 
+                
+             <li>      You got ₦6.95 from MTN SME 1GB => 202409031032VZQJR07</li> 
+                
+                <li>   You got ₦6.95 from MTN SME 1GB => 202409031014PHVFC17</li> 
+                
+                <li>   You got ₦0.5 from Mtn Airtime => 202409031011HCNAV45</li> 
+               
+            </ul>
+            <button class="see-all-btn" onclick="seeAllTransactions()">See All</button>
+        </div>
+        
+        <div class="floating-support-btn">
+            <button onclick="handleActionPage('Support')">Support</button>
+        </div>
+    </div>
+    <script>
+         
+        function handleActionPage() {
+            window.location.href = 'https://wa.link/tl9jlu'; // Adjust this to the actual page URL
+
+        }
+        function redirectodepositPage() {
+            window.location.href = 'withdraw.html'; // Adjust this to the actual page URL
+            
+        }
+        function redirecttotimePage() {
+            window.location.href = 'static.html'; // Adjust this to the actual page URL
+            
+        }
+        function redirecttotcPage() {
+            window.location.href = 'customer.html'; // Adjust this to the actual page URL
+            
+        }
+    </script>
+</body>
+</html>
